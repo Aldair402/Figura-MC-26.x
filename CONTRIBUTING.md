@@ -2,6 +2,7 @@
 
 When contributing to Figura, please first discuss and/or interact with our community via our [Discord](https://discord.figuramc.org/). 
 
+
 Please note we have a code of conduct, please follow it in all your interactions with the project.
 
 ## Development Process
