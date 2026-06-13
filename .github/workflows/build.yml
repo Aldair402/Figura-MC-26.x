@@ -29,8 +29,8 @@ jobs:
           check-latest: true
 
       - name: Build using Gradle
-        run: ./gradlew build
-
+        run: ./gradlew :spigot:build
+        
       - name: Upload Spigot artifacts to GitHub
         uses: actions/upload-artifact@v4
         with:
