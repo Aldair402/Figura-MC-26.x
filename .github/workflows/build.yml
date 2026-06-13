@@ -5,12 +5,13 @@
 name: Build Figura using Gradle
 
 on:
-  workflow_dispatch:   # <- Run workflow
+  workflow_dispatch:   # <- ejecución manual (on demand)
 
 jobs:
   build:
     if: github.actor != 'weblate'
     runs-on: ubuntu-22.04
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -20,11 +21,11 @@ jobs:
       - name: Validate Gradle wrapper
         uses: gradle/actions/setup-gradle@v4
 
-      - name: Set up JDK 17
+      - name: Set up JDK 25
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
-          java-version: 17
+          java-version: 25
           check-latest: true
 
       - name: Build using Gradle
